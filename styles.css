@@ -1,0 +1,90 @@
+body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+#layout
+{
+    display: flex;/*Similar to float left, line up next to each other, but with flex, we can move all the elements*/
+    flex-direction: row;
+    /**flex-wrap: wrap;/**Prevent items in a container from sticking out**/
+    flex-flow: row wrap;/**acts like flex wrap but using less amount of code**/
+    justify-content:space-around;/*flex-start justify the content at the beginning, that is, to the left, center to the center, end to the right*/
+    /**flex-direction: column-reverse; Smilar as row reverse, but this with columns**/ 
+    /**flex-direction: row-reverse; revert the order of the elements**/
+    /**flex-direction: column; elements act like a columns**/
+    /**display: inline-flex;/*Elements, adapts automatically to the content you have**/
+    border: 3px solid black;
+    padding: 5px;
+    height: 600px;
+    /*align-items: flex-end;/*flex-end places the element at the end and flex-start places it at the beginning*/
+}
+
+.box_red
+{
+    /**flex-basis: 100%; /*We apply a predetermined size to our boxes*/
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 4px solid black;
+    margin: 10px;
+    background: red;
+    align-self: flex-end;
+    flex-grow: 1;
+    order:4; /**With order we can alter the order of the elements without problems**/
+    /**flex-grow: 4; /*With Flexgrow we make the elements within the layout adjust and adapt their size*/
+
+}
+
+.box_blue
+{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 4px solid black;
+    margin: 10px;
+    background: lightblue;
+    flex-grow: 1;
+    order: 1;
+    align-self: flex-start;
+    /**flex-grow: 4;/*higher number, more occupies*/
+    
+}
+
+.box_purple
+{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 4px solid black;
+    margin: 10px;
+    background: purple;
+    flex-grow: 1;
+    align-self: center;
+    margin-bottom: 10%;
+    order: 2;
+    /**flex-shrink: 0;/**reduce the size of a box**/
+}
+
+.box_orange
+{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 4px solid black;
+    margin: 10px;
+    background: orange;
+    flex-grow: 1;
+    align-self: center;
+    margin-top: 10%;
+    order:3;
+}
